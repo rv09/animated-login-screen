@@ -1,0 +1,13 @@
+<resources>
+    <!--for materialized EditText in login-->
+    <declare-styleable name="MaterialTextField">
+        <attr name="mtf_cardCollapsedHeight" format="dimension" />
+        <attr name="mtf_labelColor" format="color" />
+        <attr name="mtf_image" format="reference" />
+        <attr name="mtf_animationDuration" format="integer" />
+        <attr name="mtf_openKeyboardOnFocus" format="boolean" />
+        <attr name="suffixText" format="reference|string" localization="suggested" />
+        <attr name="suffixColor" format="reference|color" />
+        <attr name="suffixTextSize" format="dimension|reference" />
+    </declare-styleable>
+</resources>

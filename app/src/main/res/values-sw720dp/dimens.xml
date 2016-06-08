@@ -1,0 +1,23 @@
+<resources>
+    <!-- for mtf view -->
+    <dimen name="mtf_cardHeight_initial">4dp</dimen>
+    <dimen name="mtf_cardHeight_final">55dp</dimen>
+    <dimen name="mtf_cardMargin_top">20dp</dimen>
+    <dimen name="mtf_height">80dp</dimen>
+    <dimen name="mtf_label_txt_size">18sp</dimen>
+    <dimen name="mtf_label_txtMargin_top">45dp</dimen>
+    <dimen name="mtf_img_size">30dp</dimen>
+    <dimen name="mtf_corner_radius">4dp</dimen>
+
+    <!-- login screen -->
+    <dimen name="card_width">634dp</dimen>
+    <dimen name="card_height">378dp</dimen>
+    <dimen name="txt_signin_margin_top">20dp</dimen>
+    <dimen name="email_id_margin_top">70dp</dimen>
+    <dimen name="email_id_suffix_txt_size">16sp</dimen>
+    <dimen name="email_id_txt_size">16sp</dimen>
+    <dimen name="password_margin_top">20dp</dimen>
+    <dimen name="mtf_view_padding">90dp</dimen>
+    <dimen name="btn_height">58dp</dimen>
+    <dimen name="img_tick_size">80dp</dimen>
+</resources>

@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mtf_height">
+
+    <TextView
+        android:id="@+id/mtf_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mtf_label_txtMargin_top"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/mtf_label_txt_size"
+        tools:text="Password" />
+
+    <RelativeLayout
+        android:id="@+id/mtf_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mtf_cardHeight_initial"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/mtf_cardMargin_top"
+        android:background="@drawable/card">
+
+        <ImageView
+            android:id="@+id/mtf_image"
+            android:layout_width="@dimen/mtf_img_size"
+            android:layout_height="@dimen/mtf_img_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true" />
+
+        <FrameLayout
+            android:id="@+id/mtf_editTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/mtf_image"
+            android:layout_toStartOf="@+id/mtf_suffix_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"/>
+
+        <!-- to add suffix text -->
+        <TextView
+            android:id="@+id/mtf_suffix_text"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</FrameLayout>

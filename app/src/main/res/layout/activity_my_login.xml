@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- login card -->
+    <RelativeLayout
+        android:id="@+id/rlt_login_card"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_centerInParent="true"
+        android:background="@color/card_blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_signin_margin_top"
+            android:layout_centerHorizontal="true"
+            android:text="@string/txt_sign_in"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <com.poc.animation.loginScreen.widget.MaterialTextField
+            android:id="@+id/mtf_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/email_id_margin_top"
+            android:layout_marginRight="@dimen/mtf_view_padding"
+            android:layout_marginLeft="@dimen/mtf_view_padding"
+            app:suffixText="@string/txt_post_gmail_com"
+            app:suffixTextSize="@dimen/email_id_suffix_txt_size"
+            app:mtf_image="@drawable/ic_login_email">
+
+            <EditText
+                android:background="@android:color/white"
+                android:id="@+id/edt_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textSize="@dimen/email_id_txt_size"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/edt_password"
+                android:hint="@string/txt_email_id" />
+        </com.poc.animation.loginScreen.widget.MaterialTextField>
+
+        <com.poc.animation.loginScreen.widget.MaterialTextField
+            android:id="@+id/mtf_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mtf_email_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/password_margin_top"
+            android:layout_marginRight="@dimen/mtf_view_padding"
+            android:layout_marginLeft="@dimen/mtf_view_padding"
+            app:mtf_image="@drawable/ic_login_password">
+
+            <EditText
+                android:background="@android:color/white"
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/email_id_txt_size"
+                android:imeOptions="actionDone"
+                android:hint="@string/txt_password"
+                android:inputType="textPassword" />
+        </com.poc.animation.loginScreen.widget.MaterialTextField>
+
+        <!-- dummy button for animation -->
+        <View
+            android:id="@+id/view_dummy_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/btn_blue"/>
+
+        <!-- background is null so animation on dummy button can be seen easily -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_alignParentBottom="true"
+            android:text="@string/btn_login"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="@null"/>
+
+        <!-- logging in layout -->
+        <LinearLayout
+            android:id="@+id/lnr_logging_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:indeterminateBehavior="repeat"
+                android:background="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_logging_in"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- tick layout-->
+        <RelativeLayout
+            android:id="@+id/rlt_tick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/img_tick_size"
+                android:layout_height="@dimen/img_tick_size"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_login_check"/>
+
+            <!-- slider view with same color as dummy button has -->
+            <View
+                android:id="@+id/slider_view"
+                android:layout_width="@dimen/img_tick_size"
+                android:layout_height="@dimen/img_tick_size"
+                android:background="@color/btn_blue"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
